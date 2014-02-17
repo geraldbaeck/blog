@@ -1,0 +1,41 @@
+---
+layout: post
+title: Twitter und der "Don't Click" Wurm
+categories:
+- Web
+tags:
+- '#dontclick'
+- Javascript
+- Noscript
+- Twitter
+- Wurm
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  s2mail: ''
+  tweetbackscheck: '1235925949'
+  shorturls: a:7:{s:9:"permalink";s:68:"http://www.baeck.at/blog/2009/02/12/twitter-und-der-dont-click-wurm/";s:7:"tinyurl";s:25:"http://tinyurl.com/cmfu7u";s:4:"isgd";s:17:"http://is.gd/jjNW";s:5:"bitly";s:19:"http://bit.ly/qYdOw";s:5:"snipr";s:22:"http://snipr.com/brh3p";s:5:"snurl";s:22:"http://snurl.com/brh3p";s:7:"snipurl";s:24:"http://snipurl.com/brh3p";}
+  twittercomments: a:7:{i:1203573072;s:3:"131";i:1203574913;s:3:"132";i:1203593356;s:3:"133";i:1203591267;s:3:"134";i:1203596731;s:3:"135";i:1203595470;s:3:"136";i:1204287105;s:3:"137";}
+  tweetcount: '7'
+---
+Heute Nachmittag verbreiteten sich relativ schnell <a href="http://search.twitter.com/search?max_id=1203315351&amp;page=1&amp;q=%22Don%27t+Click%22">"Don't Click" Messages</a> über Twitter. Dabei wurde vom jeweiligen Sender ohne sein Wissen die Nachricht "Don't Click" mit einer entsprechenden Url abgeschickt. Andere, die wiederum diese Url aufriefen und den darauf befindlichen Button drückten, verbreiteten ebenfalls die "Don't Click" Message via Twitter.
+
+Es ist natürlich sehr unangenehm, wenn man Nachrichten versendet ohne es selbst zu wollen. Das ganze funktioniert aber wenn
+<ul>
+	<li>JavaScript aktiviert und</li>
+	<li>man mit dem Webbrowser in Twitter direkt eingeloggt ist.</li>
+</ul>
+Über einen simplen <a href="http://de.selfhtml.org/navigation/suche/index.htm?Suchanfrage=iframe">iframe</a>, der unsichtbar auf der Page steht und dessen Inhalt via Buttonklick aktiviert wird. Ist man nun in Twitter eingeloggt, wird die Message abgeschickt.
+Das heißt es wurde eine Message abgeschickt aber:
+<ul>
+	<li><strong>Keiner hat Euer Passwort gestohlen</strong></li>
+	<li><strong>Ihr habt keinen Virus oder Trojaner</strong></li>
+</ul>
+Wie kann man sich jetzt gegen so etwas schützen?
+<ol>
+	<li>Keine dummen Buttons anklicken!-)</li>
+	<li>Das Plugin <a href="https://addons.mozilla.org/de/firefox/addon/722">NoScript</a> für den FireFox installieren, damit kann man steuern, welche Seite auf Euren Rechner JavaScript ausführen kann und welche nicht.</li>
+</ol>
+UPDATE: Twitter nennt das ganze <a href="http://en.wikipedia.org/wiki/Clickjacking">ClickJacking</a> und hat das bereits von ihrer Seite aus <a href="http://blog.twitter.com/2009/02/clickjacking-blocked.html">gefixt</a>. Das Porblem kann aber natürlich jederzeit auf anderen Seiten mit anderen Applikationen auftreten. Schützen kann man sich vorerst nur mit den oben beschriebenen Möglichkeiten.

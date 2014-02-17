@@ -1,0 +1,25 @@
+---
+layout: post
+title: DNS, wem vertrauen wir da eigentlich?
+categories:
+- Politik
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  _edit_last: '1'
+---
+Es gibt in Österreich ein Postgesetz. Dieses Gesetz schützt uns davor, dass der Postler nicht unsere Briefe wegmschmeißt oder absichtlihc jemand anderes zustellt. Zumindest setllt es diese unter Strafe. Im Internet gibt es keine Post und das ist auch gut so, denn dann müsste man nicht nur für jedes TCP-Paket Porto zahlen, es würde wahrscheinlich Jahre dauern, um 100k runterzuladen. Aber es gibt einen Dienst, der sich um die richtige Adressierung kümmert, den DNS- Dienst.
+
+Der DNS-Dienst kümmert sich darum, dass ich beim Surfen die richtigen Server abrufe. Er ist eine Art Adressbuch und übersetzt zum Beispiel die Anfrage an www.baeck.at in die leichter maschinenlesbare Form 85.13.131.220. Und genau hier kommt das politische Problem, da kaum jemand selbst einen DNS-Server betreibt, ist man auf andere angewiesen und muss darauf vertrauen, dass die geleiferte Information korrekt ist. Sogenannte DNS-Sperren, wie sie unsere Justizministerin gerne hätte, sind da nur eine sehr plumpe Form der Zensur und Manipulation. Der Betreiber eines DNS-Servers könnte ja auch die Telebanking Seite durch eine eigene austauschen und wäre so schnell im Besitz von Zugangsdaten und TANs. Für den Laien wäre es sehr schwer, eine solche Manipulation zu erkennen.
+
+Zweites großes Problem bei DNS Servern ist der Datenschutz. Der Betreiber eines solchen Dienstes ist immer gut darüber informiert, welche Seiten und Dienste mich im Netz gerade besonders interessieren. Der exzessive Besuch einer Datingplattform bleibt ihm ebenso wenig verborgen, wie das schon erwähnte Telebanking oder etwa das Spielen im Online-Casino. DNS ist aber ein Dienst, den der normale Nutzer in der Regel einmal einstellt und dann idealerweise vergisst, weil er ohnehin funktioniert. Auch deswegen wird dabei leider auch die Datenschutzproblematik und die Sicherheitsthematik vergessen.
+
+Eigener DNS-Server?
+
+Die sicherste Variante wäre also der Betrieb eines eigenen DNS Servers. Für Otto Normaluser ist das aber nicht wirklich eine Option, da die Installation und der Betrieb eines solchen hohes technisches Know-How erfordert. Auch für mich ist das keine Option, denn ich bin schlicht zu faul, um sowas ausreichend zu warten. Vielleicht wäre das ja mal ein Softwareprojekt, einen einfachen DNS Server für zu Hause zu programmieren?
+
+DNS-Server des Providers
+
+Jeder Internet-Provider hat einen und stellt diesen seinen Kunden zur Verfügung. Aber auch beim Verbinden in ein öffentliches WLAN erhält man meistens automatisch die DNS Einstellungen des WLAN Providers. Und genau hier beginnt das Sicherheitsrisiko, denn gerade ein WLAN Provider könnte dadurch ganz leicht per DNS Server Hompages tauschen und so sehr leicht an Userdaten und Passwörter gelangen. Deswegen hier mein erster Tipp. Beim Verbinden in ein öffentliches Netz immer einen anderes DNS Server benutzen. Da bieten sich zum Beispiel Google Public DNS oder OpenDNS an. Aber auch Provider wie zum Beispiel chello benutzen DNS gerne grenzwertig. So werden bei chello falsch getippte Domains gerne zu einer eigenen Suchseite umgeleitet, wo  man natürlich mit Werbung und ähnlichem konfrontiert wird. Hier gibt es wiederum keinen echten workaround außer einen fremden DNS Server zu verwenden. Abgesehen davon ist

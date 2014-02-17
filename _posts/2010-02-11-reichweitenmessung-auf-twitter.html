@@ -1,0 +1,775 @@
+---
+layout: post
+title: Reichweitenmessung auf Twitter
+categories:
+- Medien
+tags:
+- bcklu
+- Reichweite
+- Twitter
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+Dieses Blogposting ist quasi derNachtrag zu meiner <a href="http://www.ustream.tv/recorded/4531596">Session</a> am <a href="http://www.barcamp.at/BarCamp_Klagenfurt_2010">Barcamp Klagenfurt</a> über Reichweitenmessung auf Twitter. Twitter ist nach wie vor ein faszinierendes Tool auch wenn meinem subjektiven Eindruck nach die Menge der Nachrichten und die neuen Anmeldungen sehr stark abgenommen haben. Und natürlich ist Twitter nicht nur ein Kommunikationstool für Idealisten, sondern ein sehr gutes Marketing- und Kampagnentool. Das erst einmal erkannt, stellt sich sehr schnell die Frage nach der eigenen Reichweite. Einen ersten Versuch einer Antwort habe ich mit meinem Artikel über die <a href="http://www.baeck.at/blog/2009/11/27/unibrennt-215-millionen-reichweite-in-4-wochen/">Reichweite von #unibrennt</a> gegeben. Ein Versuch deswegen, weil viele Faktoren nicht berücksichtigt werden konnten. So ist es nicht möglich zu erheben, wie oft ein Tweet tatsächlich gelesen wurde oder welchen Anteil an den Gesamtnachrichten das Thema hatte. Meine Erhebungen schlossen damit, dass 21,5 Millionen Leser und davon 400.000 eindeutige in nur vier Wochen durch #unibrennt erreicht werden konnten.
+
+Auch im Printbereich gibt es eine Reichweitenmessung, die ebenfalls nicht unumstritten ist. So kommt es nicht nur mir sehr komisch vor, dass die Presse trotz nachweislich höherer Auflage bei der Mediaanalyse um Längen schlechter als der Standard abschneidet. Das gleiche gilt meiner Meinung nach für den Teletest, der schon lange nicht mehr die medialen Rezeptionsverhältnisse in den österreichischen Wohnzimmern abbilden kann. Größter Schwachpunkt aller Messmethoden ist es, dass die Aufmerksamkeit der RezipientInnen unberücksichtigt bleibt. Es ist schlicht unmöglich zu erfassen, welche Artikel einer Zeitung gelesen werden, welcher Tweet gesehen wird oder ob der Fernseher nicht nur allein vor sich hinläuft.
+
+<strong>Die Skurrilen</strong>
+
+Für Twitter gibt es eine Menge Tools, die versuchen die eigene Reichweite, den eigenen Einfluss auf das, was auf Twitter passiert, abzubilden. Meiner Meinung nach handelt es sich dabei um meistens skurrile Tools, die einen nicht nachvollziehbaren Wert ausgeben. Zusätzlich verheimlichen nahezu alle Anbieter die genaue Formel und geben nur ungefähre Angaben darüber, wie das eigene Ranking erstellt wurde. <a href="http://marx-blog.de/2009/10/erfolgreich-twittern-nach-zahlen/">Jörg Marx</a> hat sich schon vor längerer Zeit diese Dienste vorgenommen und analysiert, dem ist kaum etwas hinzuzufügen als meine Liste der skurrilen Seiten:
+<ul>
+	<li><a href="http://tweeteffect.com/index.php">Tweeteffect</a></li>
+	<li><a href="http://www.twitalyzer.com/">twitalyzer</a></li>
+	<li><a href="http://twscore.net/geraldbaeck">twscore</a></li>
+	<li><a href="http://klout.com/profile/stats/geraldbaeck/">klout</a></li>
+	<li><a href="http://twitter.grader.com/geraldbaeck">grader</a></li>
+	<li><a href="http://thewhuffiebank.org/geraldbaeck">thewhuffiebank</a></li>
+</ul>
+<strong>Die Charts</strong>
+
+Auf der anderen Seite gibt es jede Menge Twittercharts, die einzig und allein auf der Menge der eigenen Follower basieren. Meiner Meinung nach ist die Anzahl der eigenen Follower höchstens ein Anhaltspunkt für die eigene Reichweite. Mittlerweile ist es relativ einfach möglich, sehr schnell tausende Follower zu bekommen, die aber keinen realen Wert haben, weil diese Follower nur erspamt wurden und höchstwahrscheinlich die eigenen Tweets nie lesen werden. Indizien dafür, dass die Followerzahl für die Rezeption nicht unbedingt relevant ist, geben die Dienste <a href="http://www.twitpic.com">twitpic</a> und <a href="http://bit.ly">bit.ly</a>. Beide geben in ihrer <a href="http://code.google.com/p/bitly-api/wiki/ApiDocumentation">API</a> die Anzahl der Klicks auf einem Link aus. Bei der Auswertung dieser Links zum Beispiel für #unibrennt ergab sich, dass die Menge der Follower keinen wesentlichen Einfluss auf die Zahl der Klicks hatte. User mit zehntausenden Followern konnten nicht mehr Klicks generieren als User mit ein- oder zweitausend Followern. Der wichtigste Vertreter dieser Art von Charts ist für Österreich <a href="http://www.twittercharts.at">twittercharts.at</a>, die rein auf den Followerzahlen und der zugehörigen Geoangabe basiert.
+
+<strong>Relevant ist nicht die Followeranzahl, sondern die Following Liste Deiner Follower
+</strong>
+
+Sehr schnell hat sich auf Twitter die Zahl der Follower als Messgröße für die Reichweite etabliert. Dadurch traten ebenfalls sehr schnell verschiedene Anbieter auf den Plan, die im wesentlichen den Austausch von Followern anbieten. Ähnlich zum Linktausch folgt man sich also gegenseitig und erhöht so ebenfalls gegenseitig den eigenen Counter. Manche haben daher das Verhältnis zwischen Followern und Following als Messgröße vorgeschlagen. Meiner Meinung nach ist dieser Wert aber eine absolut irrelevante Größe und lässt wirklich logische Rückschlüsse kaum zu und kann höchstens als Faktor für einen Spamcheck verwendet werden.
+
+Mein Ansatz dazu ist, dass es für die Reichweite auf Twitter vor allem relevant ist, wie vielen anderen Accounts Deine Follower folgen. Das heißt folgt mir jemand, der noch 10.000 anderen folgt, habe ich auch nur ein zehntausendstel seiner Aufmerksamkeit also einenWert von 0.0001. Folgt mein Follower hingegen nur 100 anderen Personen, wäre sein Wert 0,01. Dieser Follower wäre also wesentlich wertvoller für die eigene Reichweite. Rein technisch muss man also regelmäßig über die Twitter API die Daten jedes einzelnen Follower abfragen und so einen Reichweiten- bzw. Aufmerksamkeitswert für jeden einzelnen User errechnen. Ich habe das im letzten Jahr sehr intensiv mit einer eigenen Applikation gemacht und mittlerweile circa 16 Millionen Profile in der Datenbank. Aus diesen Daten ergibt sich folgendes Ranking für die Twitterantinnen aus Österreich:
+<table border="0">
+<tbody>
+<tr>
+<th></th>
+<th colspan="2" align="left"></th>
+<th>PR Value</th>
+<th> Follower</th>
+</tr>
+<tr>
+<td align="right">1.</td>
+<td><a href="http://twitter.com/twidroid"><img src="http://a3.twimg.com/profile_images/537212781/tw_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/twidroid">twidroid</a></td>
+<td align="right">7644.73</td>
+<td align="right">112549</td>
+</tr>
+<tr>
+<td align="right">2.</td>
+<td><a href="http://twitter.com/ArminWolf"><img src="http://a3.twimg.com/profile_images/281831681/Wolf_Twitter_neu_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/ArminWolf">ArminWolf</a></td>
+<td align="right">1206.46</td>
+<td align="right">10722</td>
+</tr>
+<tr>
+<td align="right">3.</td>
+<td><a href="http://twitter.com/MSF_austria"><img src="http://a1.twimg.com/profile_images/22919132/MSF2_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/MSF_austria">MSF_austria</a></td>
+<td align="right">691.23</td>
+<td align="right">2445</td>
+</tr>
+<tr>
+<td align="right">4.</td>
+<td><a href="http://twitter.com/Vergraemer"><img src="http://a1.twimg.com/profile_images/625007580/3191670026_b6c43f41e0_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Vergraemer">Vergraemer</a></td>
+<td align="right">370.15</td>
+<td align="right">13167</td>
+</tr>
+<tr>
+<td align="right">5.</td>
+<td><a href="http://twitter.com/unibrennt"><img src="http://a3.twimg.com/profile_images/484612635/besetzt_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/unibrennt">unibrennt</a></td>
+<td align="right">278.18</td>
+<td align="right">2667</td>
+</tr>
+<tr>
+<td align="right">6.</td>
+<td><a href="http://twitter.com/gulli_com"><img src="http://a3.twimg.com/profile_images/234346241/gulli_logo_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/gulli_com">gulli_com</a></td>
+<td align="right">238.13</td>
+<td align="right">4620</td>
+</tr>
+<tr>
+<td align="right">7.</td>
+<td><a href="http://twitter.com/betathomecom"><img src="http://a3.twimg.com/profile_images/416241455/bah_logo_negative_rgb_square_normal.gif" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/betathomecom">betathomecom</a></td>
+<td align="right">193.00</td>
+<td align="right">451</td>
+</tr>
+<tr>
+<td align="right">8.</td>
+<td><a href="http://twitter.com/lomography"><img src="http://a1.twimg.com/profile_images/201962296/lomography.avatar_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/lomography">lomography</a></td>
+<td align="right">191.93</td>
+<td align="right">9496</td>
+</tr>
+<tr>
+<td align="right">9.</td>
+<td><a href="http://twitter.com/datadirt"><img src="http://a1.twimg.com/profile_images/206056358/profilbild2009-2_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/datadirt">datadirt</a></td>
+<td align="right">155.52</td>
+<td align="right">50355</td>
+</tr>
+<tr>
+<td align="right">10.</td>
+<td><a href="http://twitter.com/bre"><img src="http://a3.twimg.com/profile_images/83023937/Pythagoras_bot_on_my_head_on_Flickr_-_Photo_Sharing__normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/bre">bre</a></td>
+<td align="right">115.18</td>
+<td align="right">9637</td>
+</tr>
+<tr>
+<td align="right">11.</td>
+<td><a href="http://twitter.com/bensen"><img src="http://a1.twimg.com/profile_images/389901256/benm-twitter_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/bensen">bensen</a></td>
+<td align="right">102.03</td>
+<td align="right">1497</td>
+</tr>
+<tr>
+<td align="right">12.</td>
+<td><a href="http://twitter.com/twistori"><img src="http://a1.twimg.com/profile_images/53456148/twistori-5_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/twistori">twistori</a></td>
+<td align="right">101.63</td>
+<td align="right">2687</td>
+</tr>
+<tr>
+<td align="right">13.</td>
+<td><a href="http://twitter.com/misik"><img src="http://a3.twimg.com/profile_images/60453263/misik_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/misik">misik</a></td>
+<td align="right">94.37</td>
+<td align="right">3551</td>
+</tr>
+<tr>
+<td align="right">14.</td>
+<td><a href="http://twitter.com/bartelme"><img src="http://a3.twimg.com/profile_images/76453713/avatar_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/bartelme">bartelme</a></td>
+<td align="right">93.22</td>
+<td align="right">8170</td>
+</tr>
+<tr>
+<td align="right">15.</td>
+<td><a href="http://twitter.com/Verfuehrung"><img src="http://a3.twimg.com/profile_images/77196535/bild00326_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Verfuehrung">Verfuehrung</a></td>
+<td align="right">89.30</td>
+<td align="right">1247</td>
+</tr>
+<tr>
+<td align="right">16.</td>
+<td><a href="http://twitter.com/webstandardat"><img src="http://a1.twimg.com/profile_images/270950982/webstandard_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/webstandardat">webstandardat</a></td>
+<td align="right">88.46</td>
+<td align="right">1798</td>
+</tr>
+<tr>
+<td align="right">17.</td>
+<td><a href="http://twitter.com/DominicHeinzl"><img src="http://a1.twimg.com/profile_images/188112088/dominc-klein_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/DominicHeinzl">DominicHeinzl</a></td>
+<td align="right">80.37</td>
+<td align="right">1588</td>
+</tr>
+<tr>
+<td align="right">18.</td>
+<td><a href="http://twitter.com/preisjaeger"><img src="http://a1.twimg.com/profile_images/234331474/logo_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/preisjaeger">preisjaeger</a></td>
+<td align="right">78.60</td>
+<td align="right">741</td>
+</tr>
+<tr>
+<td align="right">19.</td>
+<td><a href="http://twitter.com/unsereuni"><img src="http://a3.twimg.com/profile_images/493748963/Ouruni_flame_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/unsereuni">unsereuni</a></td>
+<td align="right">78.03</td>
+<td align="right">759</td>
+</tr>
+<tr>
+<td align="right">20.</td>
+<td><a href="http://twitter.com/Lokalzeitung"><img src="http://a1.twimg.com/profile_images/118069660/002_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Lokalzeitung">Lokalzeitung</a></td>
+<td align="right">76.85</td>
+<td align="right">2597</td>
+</tr>
+<tr>
+<td align="right">21.</td>
+<td><a href="http://twitter.com/Oberhauser"><img src="http://a3.twimg.com/profile_images/82642455/Ortwin_Oberhauser_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Oberhauser">Oberhauser</a></td>
+<td align="right">74.70</td>
+<td align="right">60562</td>
+</tr>
+<tr>
+<td align="right">22.</td>
+<td><a href="http://twitter.com/Kleissner"><img src="http://a1.twimg.com/profile_images/551929988/Kleissner_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Kleissner">Kleissner</a></td>
+<td align="right">74.36</td>
+<td align="right">766</td>
+</tr>
+<tr>
+<td align="right">23.</td>
+<td><a href="http://twitter.com/Redbullairrace"><img src="http://a3.twimg.com/profile_images/422221267/plane_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Redbullairrace">Redbullairrace</a></td>
+<td align="right">73.62</td>
+<td align="right">3345</td>
+</tr>
+<tr>
+<td align="right">24.</td>
+<td><a href="http://twitter.com/martinblumenau"><img src="http://a3.twimg.com/profile_images/100014047/icon_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/martinblumenau">martinblumenau</a></td>
+<td align="right">69.77</td>
+<td align="right">2515</td>
+</tr>
+<tr>
+<td align="right">25.</td>
+<td><a href="http://twitter.com/TUbrennt"><img src="http://a3.twimg.com/profile_images/489172717/tubrennt-logo_klein_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/TUbrennt">TUbrennt</a></td>
+<td align="right">69.01</td>
+<td align="right">732</td>
+</tr>
+<tr>
+<td align="right">26.</td>
+<td><a href="http://twitter.com/fm4stories"><img src="http://a1.twimg.com/profile_images/75363288/FM4_4c_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/fm4stories">fm4stories</a></td>
+<td align="right">66.70</td>
+<td align="right">2671</td>
+</tr>
+<tr>
+<td align="right">27.</td>
+<td><a href="http://twitter.com/Firma_AT"><img src="http://a3.twimg.com/profile_images/180678719/firmenverzeichnis_normal.gif" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Firma_AT">Firma_AT</a></td>
+<td align="right">64.53</td>
+<td align="right">258</td>
+</tr>
+<tr>
+<td align="right">28.</td>
+<td><a href="http://twitter.com/EPOorg"><img src="http://a1.twimg.com/profile_images/124138342/epo_logo-square_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/EPOorg">EPOorg</a></td>
+<td align="right">59.43</td>
+<td align="right">901</td>
+</tr>
+<tr>
+<td align="right">29.</td>
+<td><a href="http://twitter.com/Lookcook"><img src="http://a1.twimg.com/profile_images/24447272/K_chlschrank_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Lookcook">Lookcook</a></td>
+<td align="right">58.51</td>
+<td align="right">28600</td>
+</tr>
+<tr>
+<td align="right">30.</td>
+<td><a href="http://twitter.com/JSCarroll"><img src="http://a3.twimg.com/profile_images/262303189/valentine_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/JSCarroll">JSCarroll</a></td>
+<td align="right">55.41</td>
+<td align="right">2491</td>
+</tr>
+<tr>
+<td align="right">31.</td>
+<td><a href="http://twitter.com/appCraftorg"><img src="http://a3.twimg.com/profile_images/358485379/win_appcra_1_0_normal.gif" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/appCraftorg">appCraftorg</a></td>
+<td align="right">53.84</td>
+<td align="right">1308</td>
+</tr>
+<tr>
+<td align="right">32.</td>
+<td><a href="http://twitter.com/Touchtalk"><img src="http://a1.twimg.com/profile_images/280003836/TTicon300_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Touchtalk">Touchtalk</a></td>
+<td align="right">52.32</td>
+<td align="right">864</td>
+</tr>
+<tr>
+<td align="right">33.</td>
+<td><a href="http://twitter.com/thomasfuchs"><img src="http://a3.twimg.com/profile_images/663892623/thomas_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/thomasfuchs">thomasfuchs</a></td>
+<td align="right">50.26</td>
+<td align="right">4776</td>
+</tr>
+<tr>
+<td align="right">34.</td>
+<td><a href="http://twitter.com/gameswelt"><img src="http://a1.twimg.com/profile_images/630500922/gwbild_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/gameswelt">gameswelt</a></td>
+<td align="right">48.14</td>
+<td align="right">670</td>
+</tr>
+<tr>
+<td align="right">35.</td>
+<td><a href="http://twitter.com/DieterBornemann"><img src="http://a3.twimg.com/profile_images/84550069/Bornemann_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/DieterBornemann">DieterBornemann</a></td>
+<td align="right">47.50</td>
+<td align="right">1586</td>
+</tr>
+<tr>
+<td align="right">36.</td>
+<td><a href="http://twitter.com/officialcs"><img src="http://a1.twimg.com/profile_images/226774316/CS_Logo_neg_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/officialcs">officialcs</a></td>
+<td align="right">47.02</td>
+<td align="right">804</td>
+</tr>
+<tr>
+<td align="right">37.</td>
+<td><a href="http://twitter.com/gruene_at"><img src="http://a3.twimg.com/profile_images/686927605/reinhard_twitter1_normal.JPG" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/gruene_at">gruene_at</a></td>
+<td align="right">46.64</td>
+<td align="right">1014</td>
+</tr>
+<tr>
+<td align="right">38.</td>
+<td><a href="http://twitter.com/chorherr"><img src="http://a3.twimg.com/profile_images/272696797/green_6341_Christoph_Chorherr_01_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/chorherr">chorherr</a></td>
+<td align="right">44.92</td>
+<td align="right">1484</td>
+</tr>
+<tr>
+<td align="right">39.</td>
+<td><a href="http://twitter.com/FKAustriaWien"><img src="http://a3.twimg.com/profile_images/436168657/aust2_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/FKAustriaWien">FKAustriaWien</a></td>
+<td align="right">44.45</td>
+<td align="right">506</td>
+</tr>
+<tr>
+<td align="right">40.</td>
+<td><a href="http://twitter.com/Travelwriticus"><img src="http://a3.twimg.com/profile_images/66442081/TravelwriterProfil74x90_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Travelwriticus">Travelwriticus</a></td>
+<td align="right">44.02</td>
+<td align="right">23564</td>
+</tr>
+<tr>
+<td align="right">41.</td>
+<td><a href="http://twitter.com/peterpur"><img src="http://a1.twimg.com/profile_images/85676884/pippi-langstrumpf_gr_face0_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/peterpur">peterpur</a></td>
+<td align="right">43.64</td>
+<td align="right">953</td>
+</tr>
+<tr>
+<td align="right">42.</td>
+<td><a href="http://twitter.com/derStandardat"><img src="http://a1.twimg.com/profile_images/110822190/der_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/derStandardat">derStandardat</a></td>
+<td align="right">43.27</td>
+<td align="right">1348</td>
+</tr>
+<tr>
+<td align="right">43.</td>
+<td><a href="http://twitter.com/sfreud"><img src="http://a3.twimg.com/profile_images/80391903/Sigmund_Freud_sq_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/sfreud">sfreud</a></td>
+<td align="right">42.98</td>
+<td align="right">2002</td>
+</tr>
+<tr>
+<td align="right">44.</td>
+<td><a href="http://twitter.com/iaeaorg"><img src="http://a1.twimg.com/profile_images/91817118/basic-vertical-colour_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/iaeaorg">iaeaorg</a></td>
+<td align="right">42.93</td>
+<td align="right">1444</td>
+</tr>
+<tr>
+<td align="right">45.</td>
+<td><a href="http://twitter.com/AiGameDev"><img src="http://a1.twimg.com/profile_images/51362172/SOCIAL_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/AiGameDev">AiGameDev</a></td>
+<td align="right">42.06</td>
+<td align="right">1060</td>
+</tr>
+<tr>
+<td align="right">46.</td>
+<td><a href="http://twitter.com/georgholzer"><img src="http://a3.twimg.com/profile_images/98510059/n567706721_686819_884_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/georgholzer">georgholzer</a></td>
+<td align="right">41.59</td>
+<td align="right">2023</td>
+</tr>
+<tr>
+<td align="right">47.</td>
+<td><a href="http://twitter.com/ChrisJunius"><img src="http://a3.twimg.com/profile_images/121329417/CJ_02_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/ChrisJunius">ChrisJunius</a></td>
+<td align="right">41.41</td>
+<td align="right">555</td>
+</tr>
+<tr>
+<td align="right">48.</td>
+<td><a href="http://twitter.com/corinnamilborn"><img src="http://a3.twimg.com/profile_images/422957799/cm3_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/corinnamilborn">corinnamilborn</a></td>
+<td align="right">41.03</td>
+<td align="right">1916</td>
+</tr>
+<tr>
+<td align="right">49.</td>
+<td><a href="http://twitter.com/Attac_Austria"><img src="http://a3.twimg.com/profile_images/524539977/Attac_Austria_Standard_klein_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Attac_Austria">Attac_Austria</a></td>
+<td align="right">38.60</td>
+<td align="right">1845</td>
+</tr>
+<tr>
+<td align="right">50.</td>
+<td><a href="http://twitter.com/parov_stelar"><img src="http://a1.twimg.com/profile_images/341015422/profil_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/parov_stelar">parov_stelar</a></td>
+<td align="right">38.15</td>
+<td align="right">781</td>
+</tr>
+</tbody></table>
+Ein großes Problem dieser Methode ergibt sich aus den inaktiven Accounts, die hier nicht ausgeschieden wurden. Deswegen gilt es als erstes festzulegen, wann denn ein Account inaktiv ist. Mein zugegebenermaßen relativ willkürlicher Ansatz war, ein Set von Mindestkriterien zusammenzustellen. Inaktiv ist man also wenn nicht alle diese Kriterien erfüllt sind.
+<ul>
+	<li>Mindestens 25 Follower</li>
+	<li>Mindestens 25 Following</li>
+	<li>Mindestens 25 Updates</li>
+	<li>Letztes Update nicht älter als vier Wochen</li>
+</ul>
+Daraus ergibt sich folgendes Ranking:
+<table border="0">
+<tbody>
+<tr>
+<th></th>
+<th colspan="2" align="left"></th>
+<th>PR Value</th>
+<th> Follower</th>
+</tr>
+<tr>
+<td align="right">1.</td>
+<td><a href="http://twitter.com/twidroid"><img src="http://a3.twimg.com/profile_images/537212781/tw_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/twidroid">twidroid</a></td>
+<td align="right">385.34</td>
+<td align="right">112549</td>
+</tr>
+<tr>
+<td align="right">2.</td>
+<td><a href="http://twitter.com/datadirt"><img src="http://a1.twimg.com/profile_images/206056358/profilbild2009-2_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/datadirt">datadirt</a></td>
+<td align="right">41.46</td>
+<td align="right">50355</td>
+</tr>
+<tr>
+<td align="right">3.</td>
+<td><a href="http://twitter.com/lomography"><img src="http://a1.twimg.com/profile_images/201962296/lomography.avatar_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/lomography">lomography</a></td>
+<td align="right">41.14</td>
+<td align="right">9496</td>
+</tr>
+<tr>
+<td align="right">4.</td>
+<td><a href="http://twitter.com/Oberhauser"><img src="http://a3.twimg.com/profile_images/82642455/Ortwin_Oberhauser_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Oberhauser">Oberhauser</a></td>
+<td align="right">35.95</td>
+<td align="right">60562</td>
+</tr>
+<tr>
+<td align="right">5.</td>
+<td><a href="http://twitter.com/Vergraemer"><img src="http://a1.twimg.com/profile_images/625007580/3191670026_b6c43f41e0_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Vergraemer">Vergraemer</a></td>
+<td align="right">33.42</td>
+<td align="right">13167</td>
+</tr>
+<tr>
+<td align="right">6.</td>
+<td><a href="http://twitter.com/bre"><img src="http://a3.twimg.com/profile_images/83023937/Pythagoras_bot_on_my_head_on_Flickr_-_Photo_Sharing__normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/bre">bre</a></td>
+<td align="right">27.78</td>
+<td align="right">9637</td>
+</tr>
+<tr>
+<td align="right">7.</td>
+<td><a href="http://twitter.com/bartelme"><img src="http://a3.twimg.com/profile_images/76453713/avatar_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/bartelme">bartelme</a></td>
+<td align="right">27.65</td>
+<td align="right">8170</td>
+</tr>
+<tr>
+<td align="right">8.</td>
+<td><a href="http://twitter.com/ArminWolf"><img src="http://a3.twimg.com/profile_images/281831681/Wolf_Twitter_neu_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/ArminWolf">ArminWolf</a></td>
+<td align="right">25.38</td>
+<td align="right">10722</td>
+</tr>
+<tr>
+<td align="right">9.</td>
+<td><a href="http://twitter.com/gulli_com"><img src="http://a3.twimg.com/profile_images/234346241/gulli_logo_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/gulli_com">gulli_com</a></td>
+<td align="right">18.20</td>
+<td align="right">4620</td>
+</tr>
+<tr>
+<td align="right">10.</td>
+<td><a href="http://twitter.com/thomasfuchs"><img src="http://a3.twimg.com/profile_images/663892623/thomas_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/thomasfuchs">thomasfuchs</a></td>
+<td align="right">15.77</td>
+<td align="right">4776</td>
+</tr>
+<tr>
+<td align="right">11.</td>
+<td><a href="http://twitter.com/Travelwriticus"><img src="http://a3.twimg.com/profile_images/66442081/TravelwriterProfil74x90_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Travelwriticus">Travelwriticus</a></td>
+<td align="right">15.61</td>
+<td align="right">23564</td>
+</tr>
+<tr>
+<td align="right">12.</td>
+<td><a href="http://twitter.com/Lookcook"><img src="http://a1.twimg.com/profile_images/24447272/K_chlschrank_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Lookcook">Lookcook</a></td>
+<td align="right">15.21</td>
+<td align="right">28600</td>
+</tr>
+<tr>
+<td align="right">13.</td>
+<td><a href="http://twitter.com/europortal"><img src="http://a1.twimg.com/profile_images/579028750/Bernd_minii__normal.JPG" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/europortal">europortal</a></td>
+<td align="right">13.15</td>
+<td align="right">26405</td>
+</tr>
+<tr>
+<td align="right">14.</td>
+<td><a href="http://twitter.com/misik"><img src="http://a3.twimg.com/profile_images/60453263/misik_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/misik">misik</a></td>
+<td align="right">11.27</td>
+<td align="right">3551</td>
+</tr>
+<tr>
+<td align="right">15.</td>
+<td><a href="http://twitter.com/Metacowboy"><img src="http://a3.twimg.com/profile_images/266764697/AmirFAce2004Alpha_normal.JPG" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Metacowboy">Metacowboy</a></td>
+<td align="right">11.19</td>
+<td align="right">20059</td>
+</tr>
+<tr>
+<td align="right">16.</td>
+<td><a href="http://twitter.com/MarkusKirchmair"><img src="http://a1.twimg.com/profile_images/639192916/IMG_9750-3_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/MarkusKirchmair">MarkusKirchmair</a></td>
+<td align="right">10.94</td>
+<td align="right">3285</td>
+</tr>
+<tr>
+<td align="right">17.</td>
+<td><a href="http://twitter.com/Marko_Gross"><img src="http://a3.twimg.com/profile_images/295065387/Marko_BlogFoto_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Marko_Gross">Marko_Gross</a></td>
+<td align="right">10.71</td>
+<td align="right">21002</td>
+</tr>
+<tr>
+<td align="right">18.</td>
+<td><a href="http://twitter.com/JSCarroll"><img src="http://a3.twimg.com/profile_images/262303189/valentine_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/JSCarroll">JSCarroll</a></td>
+<td align="right">9.10</td>
+<td align="right">2491</td>
+</tr>
+<tr>
+<td align="right">19.</td>
+<td><a href="http://twitter.com/sos4children"><img src="http://a3.twimg.com/profile_images/87496141/logo3_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/sos4children">sos4children</a></td>
+<td align="right">8.70</td>
+<td align="right">8359</td>
+</tr>
+<tr>
+<td align="right">20.</td>
+<td><a href="http://twitter.com/amyhoy"><img src="http://a3.twimg.com/profile_images/65653569/amy-silly_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/amyhoy">amyhoy</a></td>
+<td align="right">8.51</td>
+<td align="right">3371</td>
+</tr>
+<tr>
+<td align="right">21.</td>
+<td><a href="http://twitter.com/martinblumenau"><img src="http://a3.twimg.com/profile_images/100014047/icon_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/martinblumenau">martinblumenau</a></td>
+<td align="right">8.23</td>
+<td align="right">2515</td>
+</tr>
+<tr>
+<td align="right">22.</td>
+<td><a href="http://twitter.com/checkfelix"><img src="http://a1.twimg.com/profile_images/89010162/felix_augen_128px_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/checkfelix">checkfelix</a></td>
+<td align="right">8.10</td>
+<td align="right">5662</td>
+</tr>
+<tr>
+<td align="right">23.</td>
+<td><a href="http://twitter.com/pressefreiheit"><img src="http://a3.twimg.com/profile_images/61768915/reporter_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/pressefreiheit">pressefreiheit</a></td>
+<td align="right">8.07</td>
+<td align="right">3984</td>
+</tr>
+<tr>
+<td align="right">24.</td>
+<td><a href="http://twitter.com/twistori"><img src="http://a1.twimg.com/profile_images/53456148/twistori-5_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/twistori">twistori</a></td>
+<td align="right">7.91</td>
+<td align="right">2687</td>
+</tr>
+<tr>
+<td align="right">25.</td>
+<td><a href="http://twitter.com/soup_io"><img src="http://a1.twimg.com/profile_images/47508122/apple-touch-icon_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/soup_io">soup_io</a></td>
+<td align="right">7.38</td>
+<td align="right">2122</td>
+</tr>
+<tr>
+<td align="right">26.</td>
+<td><a href="http://twitter.com/unibrennt"><img src="http://a3.twimg.com/profile_images/484612635/besetzt_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/unibrennt">unibrennt</a></td>
+<td align="right">7.33</td>
+<td align="right">2667</td>
+</tr>
+<tr>
+<td align="right">27.</td>
+<td><a href="http://twitter.com/georgholzer"><img src="http://a3.twimg.com/profile_images/98510059/n567706721_686819_884_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/georgholzer">georgholzer</a></td>
+<td align="right">7.22</td>
+<td align="right">2023</td>
+</tr>
+<tr>
+<td align="right">28.</td>
+<td><a href="http://twitter.com/liechtenecker"><img src="http://a1.twimg.com/profile_images/217622980/DSC02918_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/liechtenecker">liechtenecker</a></td>
+<td align="right">6.95</td>
+<td align="right">2375</td>
+</tr>
+<tr>
+<td align="right">29.</td>
+<td><a href="http://twitter.com/muesli"><img src="http://a3.twimg.com/profile_images/639496039/hf_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/muesli">muesli</a></td>
+<td align="right">6.93</td>
+<td align="right">1735</td>
+</tr>
+<tr>
+<td align="right">30.</td>
+<td><a href="http://twitter.com/corinnamilborn"><img src="http://a3.twimg.com/profile_images/422957799/cm3_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/corinnamilborn">corinnamilborn</a></td>
+<td align="right">6.93</td>
+<td align="right">1916</td>
+</tr>
+<tr>
+<td align="right">31.</td>
+<td><a href="http://twitter.com/toskana"><img src="http://a3.twimg.com/profile_images/424446027/Andi3_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/toskana">toskana</a></td>
+<td align="right">6.82</td>
+<td align="right">18186</td>
+</tr>
+<tr>
+<td align="right">32.</td>
+<td><a href="http://twitter.com/linzerschnitte"><img src="http://a3.twimg.com/profile_images/626859719/led_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/linzerschnitte">linzerschnitte</a></td>
+<td align="right">6.76</td>
+<td align="right">2311</td>
+</tr>
+<tr>
+<td align="right">33.</td>
+<td><a href="http://twitter.com/franzku"><img src="http://a1.twimg.com/profile_images/54137108/FranzKu_200_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/franzku">franzku</a></td>
+<td align="right">6.66</td>
+<td align="right">12095</td>
+</tr>
+<tr>
+<td align="right">34.</td>
+<td><a href="http://twitter.com/snapixel"><img src="http://a1.twimg.com/profile_images/488449440/logo2_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/snapixel">snapixel</a></td>
+<td align="right">6.26</td>
+<td align="right">4109</td>
+</tr>
+<tr>
+<td align="right">35.</td>
+<td><a href="http://twitter.com/the_maki"><img src="http://a1.twimg.com/profile_images/135700188/squared_blsht_1810-polanopola_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/the_maki">the_maki</a></td>
+<td align="right">6.18</td>
+<td align="right">1362</td>
+</tr>
+<tr>
+<td align="right">36.</td>
+<td><a href="http://twitter.com/phreak20"><img src="http://a1.twimg.com/profile_images/672111146/dopeshot_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/phreak20">phreak20</a></td>
+<td align="right">6.13</td>
+<td align="right">2615</td>
+</tr>
+<tr>
+<td align="right">37.</td>
+<td><a href="http://twitter.com/EdWohlfahrt"><img src="http://a1.twimg.com/profile_images/30402822/Bild_1_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/EdWohlfahrt">EdWohlfahrt</a></td>
+<td align="right">6.07</td>
+<td align="right">3391</td>
+</tr>
+<tr>
+<td align="right">38.</td>
+<td><a href="http://twitter.com/Redbullairrace"><img src="http://a3.twimg.com/profile_images/422221267/plane_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Redbullairrace">Redbullairrace</a></td>
+<td align="right">6.06</td>
+<td align="right">3345</td>
+</tr>
+<tr>
+<td align="right">39.</td>
+<td><a href="http://twitter.com/thomas"><img src="http://a1.twimg.com/profile_images/273150686/thomas-marban-twitter_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/thomas">thomas</a></td>
+<td align="right">5.99</td>
+<td align="right">3114</td>
+</tr>
+<tr>
+<td align="right">40.</td>
+<td><a href="http://twitter.com/fm4stories"><img src="http://a1.twimg.com/profile_images/75363288/FM4_4c_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/fm4stories">fm4stories</a></td>
+<td align="right">5.88</td>
+<td align="right">2671</td>
+</tr>
+<tr>
+<td align="right">41.</td>
+<td><a href="http://twitter.com/Luca"><img src="http://a3.twimg.com/profile_images/677111915/Luca_Hammer_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/Luca">Luca</a></td>
+<td align="right">5.84</td>
+<td align="right">2094</td>
+</tr>
+<tr>
+<td align="right">42.</td>
+<td><a href="http://twitter.com/geraldbaeck"><img src="http://a1.twimg.com/profile_images/666931176/baeckblog_logo_gross_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/geraldbaeck">geraldbaeck</a></td>
+<td align="right">5.82</td>
+<td align="right">2164</td>
+</tr>
+<tr>
+<td align="right">43.</td>
+<td><a href="http://twitter.com/mydog"><img src="http://a1.twimg.com/profile_images/481728592/MaulAuf_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/mydog">mydog</a></td>
+<td align="right">5.79</td>
+<td align="right">7346</td>
+</tr>
+<tr>
+<td align="right">44.</td>
+<td><a href="http://twitter.com/chorherr"><img src="http://a3.twimg.com/profile_images/272696797/green_6341_Christoph_Chorherr_01_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/chorherr">chorherr</a></td>
+<td align="right">5.78</td>
+<td align="right">1484</td>
+</tr>
+<tr>
+<td align="right">45.</td>
+<td><a href="http://twitter.com/johannes_mono"><img src="http://a3.twimg.com/profile_images/68184595/person-962-128x128_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/johannes_mono">johannes_mono</a></td>
+<td align="right">5.65</td>
+<td align="right">1637</td>
+</tr>
+<tr>
+<td align="right">46.</td>
+<td><a href="http://twitter.com/webstandardat"><img src="http://a1.twimg.com/profile_images/270950982/webstandard_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/webstandardat">webstandardat</a></td>
+<td align="right">5.61</td>
+<td align="right">1798</td>
+</tr>
+<tr>
+<td align="right">47.</td>
+<td><a href="http://twitter.com/maxreport"><img src="http://a3.twimg.com/profile_images/268709213/lo_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/maxreport">maxreport</a></td>
+<td align="right">5.49</td>
+<td align="right">2093</td>
+</tr>
+<tr>
+<td align="right">48.</td>
+<td><a href="http://twitter.com/idLOOP"><img src="http://a1.twimg.com/profile_images/276145222/yvonnequadrat_normal.gif" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/idLOOP">idLOOP</a></td>
+<td align="right">5.44</td>
+<td align="right">8728</td>
+</tr>
+<tr>
+<td align="right">49.</td>
+<td><a href="http://twitter.com/DieterBornemann"><img src="http://a3.twimg.com/profile_images/84550069/Bornemann_normal.jpg" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/DieterBornemann">DieterBornemann</a></td>
+<td align="right">5.37</td>
+<td align="right">1586</td>
+</tr>
+<tr>
+<td align="right">50.</td>
+<td><a href="http://twitter.com/bensen"><img src="http://a1.twimg.com/profile_images/389901256/benm-twitter_normal.png" border="0" alt="" width="16" height="16" /></a></td>
+<td><a href="http://twitter.com/bensen">bensen</a></td>
+<td align="right">5.34</td>
+<td align="right">1497</td>
+</tr>
+</tbody></table>
+Größtes Problem an dieser Methode ist, dass passive Nutzer, von denen es angeblich relativ viele geben soll, nicht berücksichtigt werden, weil diese eben keine Updates schreiben. Außerdem könnte auch diese Methode exploited werden, wenn auch mit erheblichen Aufwand. Ein guter Vorschlag zur Umgehung dieses Problems kam am Barcamp Klagenfurt. Man könnte doch die Following Anzahl regelmäßig erheben und wenn sich diese ändert, als Zeichen der Aktivität deuten. Meiner Meinung nach ein sehr guter und tauglicher Vorschlag, dessen programmtechnische Umsetzung mich aber noch eine Weile beschäftigen wird.
+
+Beide Varianten zeigen, aber, dass auch hier die User mit hohen Followerzahlen ganz weit vorne sind. Deswegen verfolge ich gedanklich einen ganz neuen Ansatz.
+
+<strong>Listen sind die neuen Follower</strong>
+
+Das Listen Feature auf twitter wird meiner Meinung nach derzeit unterschätzt. Einerseits weil viele Clients noch keine gute Implementierung vorgenommen haben und andererseits, weil viele Nutzer einfach noch nichts damit anfangen können. Trotzdem denke ich, dass sich 2010 Listen stärker verbreiten werden, weil es langfristig die beste Möglichkeit ist seine Interessen zu organisieren und kategorisieren. Twitter-User, die häufig gelistet werden, scheinen für andere User besonders interessant oder gar kategorisierungswürdig. Das heißt für mich, dass die simple Anzahl der Listungen ein erstes Indiz für die eigene Reichweite wäre, wahrscheinlich aussagekräftiger als die Zahl der Follower. Setzt sich diese Ansicht allerdings druch, ist es nur eine Frage der Zeit, bis sich professionelle Backlistingservices etablieren und ein solches Ranking ad absurdum führen. Deswegen müsste man eben auch die Zahl der Abonennten einer Liste berücksichtigen, was aber wiederum erst Sinn machen würde, wenn die meisten Clients Abos sinnvoll implementiert haben.
+
+Die nächsten Schritte für mein Reichweitenprojekt werden also die bessere identifizierung von inaktiven Users sein und ein taugliches Modell fürs Ranking nach Listen zu erdenken. Unberücksichtigt bliebt bei mir bisher die Anzahl der mentions und Retweets, die ich zwar ebenfalls erhoben habe, aber hier ebenfalls noch eine Interpretationsweise gefunden werden muss.
