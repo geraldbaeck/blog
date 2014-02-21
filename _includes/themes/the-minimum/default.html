@@ -4,6 +4,9 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
+	{% if page.url == "/404.html" %}
+	    <meta http-equiv="refresh" content="5; url=/">
+	{% endif %}
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>{{ page.title }}</title>
