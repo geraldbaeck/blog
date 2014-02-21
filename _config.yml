@@ -9,7 +9,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : BäckBlog
-tagline: A software developer goes nuts
+tagline: News from a dedicated troll
 author : 
   name : Gerald Bäck
   email : gerald@baeck.at
@@ -17,7 +17,7 @@ author :
   twitter : geraldbaeck
   facebook : geraldbaeck
   googleplus : https://plus.google.com/103947976620256744810/posts
-  feedburner : 
+  feedburner : http://feeds.feedburner.com/Baeckblog
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Eve Engineering
-tagline: I am just a newb, who plays eve
+title: BäckBlog
+tagline: News from a dedicated troll
 ---
 {% include JB/setup %}
 
