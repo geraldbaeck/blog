@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html prefix="og: http://ogp.me/ns#">
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
@@ -14,6 +14,22 @@
 	<link href='{{ ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
 	<link href="http://feeds.feedburner.com/{{ site.author.feedburner }}" rel="alternate" title="{{ page.title }}" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+
+	<meta property="og:site_name" content="BäckBlog" />
+	<meta property="og:locale" content="de_AT" />
+	<meta property="og:title" content="{{ page.title }}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:article:author" content="{{ site.author.name }}" />
+	<meta property="og:url" content="http://{{ site.host }}{{ page.url }}" />
+	{% if page.image == nil %}
+		<meta property="og:image" content="http://{{ site.host }}/assets/img/baeckblog.jpeg" />
+	{% else %}
+		<meta property="og:image" content="http://{{ site.host }}{{ page.image }}" />
+	{% endif %}
+	{% if page.image != nil %}
+		<meta property="og:description" content="{{ page.description}}" />
+	{% endif %}
+	
 </head>
 <body>
 
