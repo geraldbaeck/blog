@@ -27,7 +27,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://blog.baeck.at
+production_url : http://www.baeck.at
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -130,3 +130,4 @@ JB :
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
   
+  markdown: kramdown
