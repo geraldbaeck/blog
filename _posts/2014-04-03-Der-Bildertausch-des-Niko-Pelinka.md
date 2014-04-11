@@ -9,15 +9,12 @@ type: post
 published: true
 image: /assets/img/raspberry_690.jpg
 description: Die Assoziierung zur SPÖ scheint für Niko P. mittlerweile ein Karrierehindernis zu sein.
-meta:
-  _edit_last: '1'
 ---
 
 "Ohne die Partei bin ich nichts.", sagte einst [Fred Sinowatz](http://derstandard.at/1216919085382), aber das ist lange her. Die heutige Parteisoldatengeneration ist da selbstbewusster. So zum Beispiel heute [Niko Pelinka](https://de.wikipedia.org/wiki/Niko_Pelinka), der dieses Foto nicht mehr mit seinem Wikipediaeintrag verbunden sehen möchte.
 
 ![Niko Pelinka](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Niko_Pelinka.jpg/494px-Niko_Pelinka.jpg "Niko Pelinka")
-<font size="-5"> [Creative Commons](https://en.wikipedia.org/wiki/en:Creative_Commons) [Attribution-Share Alike 2.0 Generic license](https://creativecommons.org/licenses/by-sa/2.0/deed.en)
-Attribution: SPÖ Presse und Kommunikation / Thomas Lehmann</font>
+<p><center><sub><sup><a href="https://en.wikipedia.org/wiki/en:Creative_Commons">Creative Commons</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en">Attribution-Share Alike 2.0 Generic license</a> Attribution: SPÖ Presse und Kommunikation / Thomas Lehmann</sup></sub></center></p>
 
 Er begründet das [hier](https://commons.wikimedia.org/wiki/Commons:Deletion_requests/File:Niko_Pelinka.jpg) folgendermaßen: 
 
