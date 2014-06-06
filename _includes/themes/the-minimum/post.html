@@ -36,8 +36,8 @@
 				<div class="misc-content">
 					<div class="social">
 						<ul class="list-linear">
-							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="{{ site.author.twitter }}" data-lang="en">Tweet</a></div></li>
-							<li><div class="twitter-follow"><a href="https://twitter.com/{{ site.author.twitter }}" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+							<li><div style="line-height:4px;">&nbsp;</div><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-via="geraldbaeck" data-lang="de" data-related="geraldbaeck" data-dnt="true">Twittern</a></div></li>
+							<li><div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-type="button_count"></div></li>
 						</ul>
 					</div>
 					
@@ -49,3 +49,12 @@
 		</div><!-- content -->
 	</div><!-- unit-inner -->
 </article>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=283331891766143&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
