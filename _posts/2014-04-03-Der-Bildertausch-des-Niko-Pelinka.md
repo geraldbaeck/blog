@@ -7,7 +7,6 @@ tags: []
 status: publish
 type: post
 published: true
-image: /assets/img/raspberry_690.jpg
 description: Die Assoziierung zur SPÖ scheint für Niko P. mittlerweile ein Karrierehindernis zu sein.
 ---
 
